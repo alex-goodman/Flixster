@@ -12,6 +12,7 @@ public class Movie {
     String overview;
     String posterPath; //not the actual image
     String backdropPath; // again, not the actual image
+    Double voteAverage; // average rating
 
     // no-arg constructor
     public Movie() {}
@@ -22,6 +23,7 @@ public class Movie {
         overview = object.getString("overview");
         posterPath = object.getString("poster_path");
         backdropPath = object.getString("backdrop_path");
+        voteAverage = object.getDouble("vote_average");
 
     }
 
@@ -39,5 +41,9 @@ public class Movie {
 
     public String getBackdropPath() {
         return backdropPath;
+    }
+
+    public Double getVoteAverage() {
+        return voteAverage;
     }
 }
