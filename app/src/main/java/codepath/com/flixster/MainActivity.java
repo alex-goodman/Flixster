@@ -46,8 +46,6 @@ public class MainActivity extends AppCompatActivity {
     Config imConfig;
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,8 +64,6 @@ public class MainActivity extends AppCompatActivity {
         rvMovies = findViewById(R.id.rvMovies);
         rvMovies.setLayoutManager(new LinearLayoutManager (this));
         rvMovies.setAdapter(adapter);
-
-
 
         // get the configuration on app creation
         getConfig();
@@ -134,7 +130,6 @@ public class MainActivity extends AppCompatActivity {
             }
 
             // and our own onFailure method
-
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
                 logError("Failure getting configuration", throwable, true);
