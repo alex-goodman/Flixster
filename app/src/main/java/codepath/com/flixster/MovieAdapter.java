@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,8 @@ import org.parceler.Parcels;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import codepath.com.flixster.models.Config;
 import codepath.com.flixster.models.GlideApp;
 import codepath.com.flixster.models.Movie;
@@ -91,19 +94,14 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         // track view objects
-        ImageView ivPoster;
-        ImageView ivBackdrop;
-        TextView tvTitle;
-        TextView tvOverview;
+        @Nullable @BindView(R.id.ivPoster) ImageView ivPoster;
+        @Nullable @BindView(R.id.ivBackdrop) ImageView ivBackdrop;
+        @BindView(R.id.tvTitle) TextView tvTitle;
+        @BindView(R.id.tvOverview) TextView tvOverview;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-
-            // lookup view objects by id
-            ivPoster = (ImageView) itemView.findViewById(R.id.ivPoster);
-            tvTitle = (TextView) itemView.findViewById(R.id.tvTitle);
-            tvOverview = (TextView) itemView.findViewById(R.id.tvOverview);
-            ivBackdrop = (ImageView) itemView.findViewById(R.id.ivBackdrop);
+            ButterKnife.bind(this, itemView);
             itemView.setOnClickListener(this);
         }
 

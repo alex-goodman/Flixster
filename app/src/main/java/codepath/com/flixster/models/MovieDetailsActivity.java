@@ -8,15 +8,17 @@ import android.widget.TextView;
 
 import org.parceler.Parcels;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import codepath.com.flixster.R;
 
 public class MovieDetailsActivity extends AppCompatActivity {
 
     Movie movie;
 
-    TextView tvTitle;
-    TextView tvOverview;
-    RatingBar rbVoteAverage;
+    @BindView(R.id.tvTitle) TextView tvTitle;
+    @BindView(R.id.tvOverview) TextView tvOverview;
+    @BindView(R.id.rbVoteAverage) RatingBar rbVoteAverage;
 
 
     @Override
@@ -24,9 +26,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_details);
 
-        tvTitle = (TextView) findViewById(R.id.tvTitle);
-        tvOverview = (TextView) findViewById(R.id.tvOverview);
-        rbVoteAverage = (RatingBar) findViewById(R.id.rbVoteAverage);
+        ButterKnife.bind(this);
 
         // get the movie passed in from intent
         Movie movie = (Movie) Parcels.unwrap(getIntent().getParcelableExtra(Movie.class.getSimpleName()));
