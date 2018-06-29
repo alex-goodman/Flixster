@@ -83,7 +83,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
         // set request params
         RequestParams params = new RequestParams();
         // add API key
-        params.put(API_KEY_PARAM, getString(R.string.youtube_key));
+        params.put(API_KEY_PARAM, getString(R.string.api_key));
         // send the request
         client.get(url, params, new JsonHttpResponseHandler() {
             @Override
