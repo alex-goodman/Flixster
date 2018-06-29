@@ -10,7 +10,7 @@
         android:id="@+id/tvTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ivBackdrop"
+        android:layout_below="@id/player"
         android:layout_alignParentStart="true"
         android:text="TextView"
         android:textAppearance="@android:style/TextAppearance.Large"
@@ -43,16 +43,10 @@
         tools:layout_editor_absoluteY="81dp"
         android:layout_alignParentLeft="true" />
 
-    <ImageView
-        android:id="@+id/ivBackdrop"
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/player"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:adjustViewBounds="true"
-        android:scaleType="fitXY"
-        android:onClick="onClickBackdrop"
-        app:srcCompat="@drawable/flicks_backdrop_placeholder" />
+        android:layout_height="wrap_content"/>
 
 
 </RelativeLayout>
