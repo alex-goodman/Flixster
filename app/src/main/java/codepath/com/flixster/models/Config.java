@@ -3,7 +3,9 @@ package codepath.com.flixster.models;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.parceler.Parcel;
 
+@Parcel
 public class Config {
     // base URL for loading images
     String imageBaseUrl;
@@ -12,6 +14,10 @@ public class Config {
     // backdrop size for landscape orientation
     String backdropSize;
 
+    // for Parceler
+    public Config() {
+
+    }
 
     // constructor
     public Config(JSONObject object) throws JSONException {

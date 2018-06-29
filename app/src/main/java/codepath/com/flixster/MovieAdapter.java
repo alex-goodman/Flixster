@@ -118,6 +118,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
 
             // package up the movie to send to the details page
             intent.putExtra(Movie.class.getSimpleName(), Parcels.wrap(movie));
+            intent.putExtra("config", Parcels.wrap(imConfig));
 
             // change activities
             context.startActivity(intent);

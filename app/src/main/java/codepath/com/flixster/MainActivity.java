@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
         // resolve the RecyclerView, connect a LayoutManager, add adapter
         ButterKnife.bind(this);
-        rvMovies.setLayoutManager(new LinearLayoutManager (this));
+        rvMovies.setLayoutManager(new LinearLayoutManager(this));
         rvMovies.setAdapter(adapter);
 
         // get the configuration on app creation
