@@ -28,7 +28,8 @@
         android:textAppearance="@android:style/TextAppearance.Medium"
         tools:layout_editor_absoluteX="482dp"
         tools:layout_editor_absoluteY="2dp"
-        tools:text="Movie Title" />
+        tools:text="Movie Title"
+        android:textColor="#FFFFFF"/>
 
     <TextView
         android:id="@+id/tvOverview"
@@ -37,6 +38,7 @@
         android:layout_below="@+id/tvTitle"
         android:layout_toEndOf="@+id/ivBackdrop"
         android:text="TextView"
+        android:textColor="#FFFFFF"
         tools:layout_editor_absoluteX="482dp"
         tools:layout_editor_absoluteY="31dp" />
 </RelativeLayout>
